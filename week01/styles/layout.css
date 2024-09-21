@@ -1,0 +1,48 @@
+body {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 20% 1fr 20%;
+    grid-template-areas:
+        "header"
+        "nav"
+        "main"
+        "footer";
+}
+
+header {
+    grid-area: header;
+    background-color: rgb(105, 104, 104);
+    color: white;
+}
+
+nav {
+    grid-area: nav;
+    display: flex;
+    justify-content: space-evenly;
+    background-color: black;
+    height: 40%;
+}
+
+main {
+    display: flex;
+    grid-area: main;
+    justify-content: space-between;
+    background-color: rgb(204, 204, 204);
+    width: 80%;
+    height: 240px;
+    text-align:right;
+}
+
+aside {
+    grid-area: aside;
+    background-color: white;
+    width: 20%;
+}
+
+footer {
+    grid-area: footer;
+    align-self: center;
+    text-align: center;
+    background-color: rgb(105, 104, 104);
+    color: white;
+}
