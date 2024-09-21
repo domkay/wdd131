@@ -1,48 +1,64 @@
 body {
     display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 20% 1fr 20%;
+    grid-template-columns: 1fr auto;
     grid-template-areas:
-        "header"
-        "nav"
-        "main"
-        "footer";
+        "header header"
+        "main aside"
+        "footer footer";
 }
 
 header {
     grid-area: header;
-    background-color: rgb(105, 104, 104);
+    display: flex;
+    flex-direction: column;
+    align-items: right;
+    background-color: dimgray;
     color: white;
 }
 
-nav {
-    grid-area: nav;
+nav ul {
+    list-style: none;
     display: flex;
     justify-content: space-evenly;
     background-color: black;
-    height: 40%;
+    height: 100%;
+    align-items: center;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
 }
 
 main {
-    display: flex;
     grid-area: main;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
     justify-content: space-between;
-    background-color: rgb(204, 204, 204);
-    width: 80%;
+    margin-top: 1rem;
+
+}
+
+.main-content {
+    width: 70%;
+    background-color: rgb(209, 209, 19);
     height: 240px;
-    text-align:right;
 }
 
 aside {
     grid-area: aside;
-    background-color: white;
-    width: 20%;
+    display: flex;
+    /*flex-direction:;*/
+    /*align-items:self-end;*/
+    height: 240px;
 }
 
 footer {
     grid-area: footer;
-    align-self: center;
-    text-align: center;
-    background-color: rgb(105, 104, 104);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: dimgray;
     color: white;
 }
