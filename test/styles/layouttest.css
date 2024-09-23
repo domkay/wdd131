@@ -1,0 +1,20 @@
+.navigation { 
+    display: flex;
+    align-items: center;
+    flex: 1 1 auto;
+   }
+  
+  .navigation a {
+      display: flex;
+      color: #eee;
+      padding: 0.75rem;
+      text-decoration: none;
+      text-align: center;
+  } 
+
+  aside { 
+    border: 1px solid #eee;
+    padding: 2rem;
+    text-align: center;
+    grid-column: 1 / 3;
+  }
