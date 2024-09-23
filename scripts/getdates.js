@@ -1,7 +1,3 @@
-<script>
-    document.getElementById("currentyear").textContent = new Date().getFullYear();
-</script>
-
 // Get the current year
 const currentYear = new Date().getFullYear();
 

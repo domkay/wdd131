@@ -84,6 +84,22 @@ footer {
     color: white;
 }
 
+
+footer {
+    grid-area: footer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: dimgray;
+    color: white;
+}
+
 footer p {
     display: block;
+    margin: 0;
+}
+
+#lastModified {
+    text-align: right;
 }
