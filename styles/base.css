@@ -1,105 +1,64 @@
-body {
-    display: grid;
-    grid-template-columns: 1fr auto;
-    grid-template-areas:
-        "header header"
-        "main aside"
-        "footer footer";
-    font-family: 'Roboto', sans-serif;
-}
-
-h1,
-h2,
-h3 {
-    font-family: 'Open Sans', sans-serif;
-}
-
-h1 {
-    text-align: center;
-}
-
 header {
-    grid-area: header;
     display: flex;
+    /* Make header a flex container */
     flex-direction: column;
-    background-color: dimgray;
+    align-items: center;
+    /* Align content vertically */
+    justify-content: space-evenly;
+    /* Distribute content horizontally with space */
+    background-color: rgb(6, 4, 77);
     color: white;
+}
+
+nav {
+    width: 100%;
+    background-color: black;
 }
 
 nav ul {
-    list-style: none;
     display: flex;
+    /* Make the unordered list a flex container */
     justify-content: space-evenly;
-    background-color: black;
-    height: 100%;
-    align-items: center;
+    /* Distribute links horizontally with space */
 }
 
 nav ul li {
-    flex: 1 1 100%;
+    list-style: none;
+    /* Remove bullet points */
 }
 
-nav ul li a {
+nav a {
     color: white;
     text-decoration: none;
-    padding: 1rem;
-    transition: background-color 0.3s ease;
-    /* Add transition for hover effect */
-}
-
-nav ul li a:hover {
-    background-color: #333;
-    /* Change hover color to darker shade */
 }
 
 main {
-    grid-area: main;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    margin-top: 1rem;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    /* Defines two columns, first 1fr (fraction), second 3fr */
+    width: 100%;
+}
+
+
+
+main h2 {
+    grid-column: span 2;
+    width: 100%;
+    background-color: rgb(6, 4, 77);
+    color: white;
+    text-align: center;
+    margin-top: 0;
 }
 
 .card {
-    width: 70%;
-    background-color: rgb(209, 209, 19);
-    height: 240px;
+    display: grid;
+    grid-template-rows: auto 1fr;
+    margin: 1px;
+    border: solid black 1px;
+
 }
 
-aside {
-    grid-area: aside;
-    display: flex;
-    flex-direction: column;
-    align-items: self-end;
-    height: 240px;
-}
-
-footer {
-    grid-area: footer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: dimgray;
-    color: white;
-}
-
-
-footer {
-    grid-area: footer;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    background-color: dimgray;
-    color: white;
-}
-
-footer p {
-    display: block;
-    margin: 0;
-}
-
-#lastModified {
-    text-align: right;
+.card img {
+    float: right;
+    margin-left: 10px;
 }
