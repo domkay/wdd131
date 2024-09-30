@@ -8,4 +8,4 @@ const lastModifiedDate = document.lastModified;
 document.getElementById("currentyear").textContent = currentYear;
 
 // Update the last modified date in the footer
-document.getElementById("lastModified").textContent = lastModifiedDate;
+document.getElementById("lastModified").textContent = "Last Modified: " + lastModifiedDate
