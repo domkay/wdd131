@@ -1,0 +1,110 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(248, 9, 228);
+    color: rgba(7, 19, 1, 0.452);
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+nav {
+    margin: 0 auto;
+    /* max-width: 800px; */
+    background-color: blueviolet;
+    width: 100%;
+}
+
+nav ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    /* justify-content: space-evenly; */
+}
+
+nav ul li {
+    list-style: none;
+    flex: 1 1 100%;
+}
+
+nav a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    text-align: center;
+    padding: 1rem;
+}
+
+nav a:hover {
+    background-color: #ccc;
+}
+
+.active {
+    color: cyan;
+}
+
+main {
+    margin: 0 auto;
+    max-width: 1200px;
+    padding: 20px;
+}
+
+main h2 {
+    text-align: center;
+}
+
+.temples {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    /* Adjust minmax values for desired column size and flexibility */
+    grid-gap: 30px;
+    max-columns: 3;
+    /* Adjust grid gap for spacing between figures */
+    justify-content: center;
+    align-items: center;
+    /* justify-items: center; */
+}
+
+figure {
+    display: grid;
+    /* Make the figure a grid container */
+    grid-template-rows: auto 1fr;
+    /* Create two rows: one for the image and one for the caption */
+    gap: 10px;
+    justify-content: center;
+}
+
+figcaption {
+    text-align: center;
+    /* Center the caption text */
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: rgb(248, 9, 228);
+    color: white;
+    padding: 0;
+}
+
+.menu {
+    display: none;
+}
+
+/* @media screen and (max-width: 768px) {
+
+    .temples {
+        max-columns: 2;
+    }
+} */
