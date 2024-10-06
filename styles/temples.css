@@ -47,7 +47,7 @@ body {
 .nav_menu.active ul {
     display: flex;
     flex-direction: row;
-    justify-content: centser;
+    justify-content: center;
     justify-items: center;
     align-items: center;
     list-style: none;
