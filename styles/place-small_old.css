@@ -1,0 +1,103 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: rgb(247, 6, 6);
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+header h1 {
+    color: rgb(214, 214, 51);
+    width: 100%;
+    background-color: blue;
+    text-align: center;
+    padding: 20px;
+    margin-bottom: 10px;
+    margin-top: 0;
+    margin-right: 0;
+    margin-left: 0;
+}
+
+/* main {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+main h2 {
+    text-align: center;
+    width: 100%;
+    max-width: 800px;
+    padding: 0;
+}
+
+.data,
+.weather {
+    display: flex;
+} */
+
+main {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+    width: 100%;
+    height: 100%;
+}
+
+.hero {
+    grid-column: 1 / span 2;
+}
+
+/* .data,
+.weather {
+    grid-column: 2;
+} */
+
+.data,
+.weather {
+    display: grid;
+    grid-template-rows: auto 1fr;
+    /* Create two rows: one for h2 and one for content */
+    grid-template-areas:
+        "header"
+        "content";
+}
+
+.data h2,
+.weather h2 {
+    grid-area: header;
+    margin-bottom: 0px;
+}
+
+/* .data,
+.weather {
+    margin-top: 5px;
+    display: flex;
+    flex-direction: row;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+}
+
+.data h2,
+.weather h2 {
+    text-align: center;
+}
+
+.data {
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+} */

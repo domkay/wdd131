@@ -1,0 +1,91 @@
+/* @media (min-width: 680px) {
+    :root {
+        --myblue: blue;
+        --myyellow: rgb(214, 214, 51);
+        --myred: rgb(247, 6, 6);
+    }
+
+    body {
+        font-family: 'Montserrat', sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+
+    header {
+        background-color: var(--myred);
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+
+    header h1 {
+        color: var(--myyellow);
+        width: 100%;
+        background-color: var(--myblue);
+        text-align: center;
+        padding: 20px;
+        margin-bottom: 10px;
+        margin-top: 0;
+        margin-right: 0;
+        margin-left: 0;
+        font-size: 40px;
+    }
+
+    footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        background-color: var(--myblue);
+        color: var(--myyellow);
+        padding: 0;
+    }
+} */
+
+@media (min-width: 680px) {
+    :root {
+        --myblue: blue;
+        --myyellow: rgb(214, 214, 51);
+        --myred: rgb(247, 6, 6);
+    }
+
+    body {
+        font-family: 'Montserrat', sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+
+    main {
+        display: block;
+    }
+
+    /* Adjust styles for larger screens here */
+    .hero {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .container {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .container h2 {
+        background-color: var(--myyellow);
+        color: var(--myblue);
+    }
+
+    .data,
+    .weather {
+        background-color: white;
+    }
+
+    .label {
+        text-align: left;
+        font-weight: bold;
+    }
+
+    .values {
+        font-weight: normal;
+    }
+}

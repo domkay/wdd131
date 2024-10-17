@@ -1,0 +1,11 @@
+.hero img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

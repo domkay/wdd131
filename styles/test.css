@@ -1,0 +1,37 @@
+.hero {
+    height: 100%;
+}
+
+.data-container,
+.weather-container {
+    position: absolute;
+    top: 20px;
+    /* Adjust as needed */
+    left: 20px;
+    /* Adjust as needed */
+    width: 250px;
+    /* Adjust width as needed */
+    height: calc(100% - 40px);
+    /* Adjust height to fit hero */
+    background-color: rgba(255, 255, 255, 0.8);
+    /* Semi-transparent background */
+    padding: 10px;
+}
+
+.data-container {
+    left: 20px;
+}
+
+.weather-container {
+    right: 20px;
+}
+
+/* Media Queries for screens wider than 680px */
+@media (min-width: 680px) {
+
+    .data-container,
+    .weather-container {
+        width: 300px;
+        /* Adjust width for larger screens */
+    }
+}
