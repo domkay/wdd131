@@ -27,7 +27,6 @@ body {
 
 .nav_menu {
     display: none;
-    /* Initially hide the navigation menu */
 }
 
 /* .nav_menu.active {
