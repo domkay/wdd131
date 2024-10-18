@@ -59,13 +59,14 @@
         display: block;
     }
 
-    /* Adjust styles for larger screens here */
     .hero {
+        position: relative;
         width: 100%;
         margin: 0 auto;
     }
 
     .container {
+        position: absolute;
         width: 100%;
         margin: 0 auto;
     }

@@ -12,8 +12,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="styles/place-larger.css">
-    <link rel="stylesheet" href="styles/place-small.css">
+    <link rel="stylesheet" href="styles/place.css">
     <script src="scripts/getdates.js" defer></script>
     <script src="scripts/place.js" defer></script>
 </head>
@@ -26,54 +25,48 @@
     <main>
         <div class="hero">
             <picture>
-                <source media="(min-width:1000px)" srcset="images/place-large.webp">
-                <source media="(min-width:500px)" srcset="images/place-medium.webp">
-                <img src="images/place-small.webp" alt="Calgary Alberta Temple Small" width="400" height="200">
+                <source media="(min-width: 1000px)" srcset="images/place-large.webp">
+                <source media="(min-width: 750px)" srcset="images/place-medium.webp">
+                <img src="images/place-small.webp" alt="Mountain view">
             </picture>
         </div>
-        <div class="container">
+
+        <section class="data_container">
             <h2>Data</h2>
             <div class="data">
-
-                <ul class="label">
-                    <li>Area:</li>
-                    <li>Population:</li>
-                    <li>Capital:</li>
-                    <li>Languages:</li>
-                    <li>Currency:</li>
-                    <li>Time Zone:</li>
-                    <li>Calling code:</li>
-                    <li>Internet TLD:</li>
-                </ul>
-                <ul class="values">
-                    <li>2,345,409 km2.</li>
-                    <li>109,717,326.</li>
-                    <li>Kinshasa.</li>
-                    <li>French.</li>
-                    <li>Congolese franc (CDF).</li>
-                    <li>UTC+1 to +2 (WAT and CAT).</li>
-                    <li>+243.</li>
-                    <li>.cd</li>
-                </ul>
+                <span class="label">Area:</span>
+                <span class="value">2,345,409 km2.</span>
+                <span class="label">Population:</span>
+                <span class="value">109,717,326.</span>
+                <span class="label">Capital:</span>
+                <span class="value">Kinshasa</span>
+                <span class="label">Languages:</span>
+                <span class="value">French</span>
+                <span class="label">Currency:</span>
+                <span class="value">Congolese Franc (CDF)</span>
+                <span class="label">Time Zone:</span>
+                <span class="value">UTC+1 to +2 (WAT and CAT).</span>
+                <span class="label">Calling Code:</span>
+                <span class="value">+243</span>
+                <span class="label">Internet TLD:</span>
+                <span class="value">.cd</span>
             </div>
+        </section>
+
+        <section class="weather_container">
             <h2>Weather</h2>
-            <img class="weatherico" src="images/weather.svg" alt="weather icon">
+            <img src="images/weather.svg" alt="weather icon" class="weather-icon">
             <div class="weather">
-
-                <ul class="label">
-                    <li>Temperature:</li>
-                    <li>Conditions:</li>
-                    <li>Wind:</li>
-                    <li>Wind Chill:</li>
-                </ul>
-                <ul class="values">
-                    <li>23°.</li>
-                    <li>Partly cloudy.</li>
-                    <li>3.5km/h</li>
-                    <li><span id="windChill">N/A</span></li>
-                </ul>
+                <span class="label">Temperature:</span>
+                <span class="value">23°C.</span>
+                <span class="label">Conditions:</span>
+                <span class="value">Partly cloudy</span>
+                <span class="label">Wind:</span>
+                <span class="value">3.5km/h</span>
+                <span class="label">Wind Chill:</span>
+                <span class="value" id="windChill">N/A</span>
             </div>
-        </div>
+        </section>
     </main>
     <footer>
         <p>&copy; <span id="currentyear"></span> Madji Kayombo, Democratic Republic of Congo.</p>
