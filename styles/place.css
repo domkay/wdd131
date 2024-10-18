@@ -170,6 +170,19 @@ main {
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     }
 
+    @media screen and (min-width: 800px) {
+        .weather_container::after {
+            content: "";
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            background-image: url("images/weather.svg");
+            background-repeat: no-repeat;
+            background-position: center;
+            margin-right: 10px;
+        }
+    }
+
     h2 {
         background-color: var(--myblue);
         color: white;
