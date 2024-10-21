@@ -203,7 +203,7 @@ main {
 
     .weather {
         justify-content: center;
-        margin-right: 100px;
+        /* margin-right: 100px; */
     }
 
     .label {
