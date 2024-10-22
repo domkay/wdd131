@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WDD 131 - Temples - Madji Kayombo</title>
+    <meta name="description"
+        content="WDD 131 - Dynamic Web Fundamentals course by Madji Kayombo. This page showcases basic HTML structure and includes sections with relevant content and resources.">
+    <meta name="author" content="Madji Kayombo Ngoie">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles/filtered-temples-large.css">
+    <link rel="stylesheet" href="styles/filtered-temples--.css">
+    <script src="scripts/getdates.js" defer></script>
+    <script src="scripts/filtered-temples.js" defer></script>
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="header_top">
+            <h1>Temples Album</h1>
+            <button class="hamburger-btn" onclick="toggleMenu()">
+                <span class="menu-icon">&#9776;</span>
+                <span class="close-icon">&#10005;</span>
+            </button>
+        </div>
+        <div class="nav_menu" id="navMenu">
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Old</a></li>
+                    <li><a href="#">New</a></li>
+                    <li><a href="#">Large</a></li>
+                    <li><a href="#">Small</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main class="main">
+        <h2 class="currentTemple">Home</h2>
+
+        <div class="temples" id="templecards">
+
+        </div>
+    </main>
+    <footer>
+        <p>&copy; <span id="currentyear"></span> Madji Kayombo, Democratic Republic of Congo.</p>
+        <p id="lastModified">Last Modified: N/A</p>
+    </footer>
+</body>
+
+</html>

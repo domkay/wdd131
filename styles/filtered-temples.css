@@ -1,0 +1,114 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.header_top .hamburger-btn {
+    display: block;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    background-color: firebrick;
+}
+
+.header_top {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    justify-items: center;
+    color: white;
+    padding-left: 10px;
+}
+
+.nav_menu {
+    display: none;
+}
+
+/* .nav_menu.active {
+    display: block;
+} */
+
+.nav_menu.active {
+    flex: 2;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: space-evenly;
+    align-items: center;
+    background-color: rgb(82, 30, 30);
+}
+
+.nav_menu.active ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    list-style: none;
+
+}
+
+.nav_menu.active ul li {
+    margin: 0 10px;
+
+}
+
+.nav_menu.active ul li a {
+    color: white;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.nav_menu.active ul li a:hover {
+    background-color: #ccc;
+}
+
+.curreemple {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+main {
+    max-width: 760px;
+    margin: 0 auto;
+}
+
+.temples {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 40px;
+    align-items: center;
+    justify-content: center;
+}
+
+.temples figure {
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.temples figure figcaption {
+    text-align: center;
+}
+
+.temples figure img {
+    max-width: 100%;
+    height: auto;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: firebrick;
+    color: white;
+    padding: 0;
+}
