@@ -107,23 +107,28 @@ const largeLink = document.querySelector("#large");
 const smallLink = document.querySelector("#small");
 
 homeLink.addEventListener("click", () => {
-    createTempleCard(temples)
+    createTempleCard(temples);
+    document.getElementById("currentTemple").textContent = "All Temples";
 });
 
 oldLink.addEventListener("click", () => {
-    createTempleCard(temples.filter(temple => new Date(temple.dedicated).getFullYear() < 1900))
+    createTempleCard(temples.filter(temple => new Date(temple.dedicated).getFullYear() < 1900));
+    document.getElementById("currentTemple").textContent = "Old Temples";
 });
 
 newLink.addEventListener("click", () => {
-    createTempleCard(temples.filter(temple => new Date(temple.dedicated).getFullYear() > 2000))
+    createTempleCard(temples.filter(temple => new Date(temple.dedicated).getFullYear() > 2000));
+    document.getElementById("currentTemple").textContent = "New Temples";
 });
 
 largeLink.addEventListener("click", () => {
-    createTempleCard(temples.filter(temple => temple.area > 90000))
+    createTempleCard(temples.filter(temple => temple.area > 90000));
+    document.getElementById("currentTemple").textContent = "Large Temples";
 });
 
 smallLink.addEventListener("click", () => {
-    createTempleCard(temples.filter(temple => temple.area < 10000))
+    createTempleCard(temples.filter(temple => temple.area < 10000));
+    document.getElementById("currentTemple").textContent = "Small Temples";
 });
 
 function createTempleCard(filteredTemples) {
@@ -154,44 +159,3 @@ function createTempleCard(filteredTemples) {
     });
 }
 createTempleCard(temples);
-
-// // Function to display temples
-// function displayTemples(templeList) {
-//     const templeCards = document.getElementById("templecards");
-//     templeCards.innerHTML = '';  // Clear previous content
-
-//     templeList.forEach(temple => {
-//         const card = document.createElement('figure');
-//         card.innerHTML = `
-//         <img src="${temple.imageUrl}" alt="${temple.templeName}" loading="lazy">
-//         <figcaption>
-//           <h3>${temple.templeName}</h3>
-//           <p>Location: ${temple.location}</p>
-//           <p>Dedicated: ${temple.dedicated}</p>
-//           <p>Area: ${temple.area} sq. ft.</p>
-//         </figcaption>`;
-//         templeCards.appendChild(card);
-//     });
-// }
-
-// // Initial Display of All Temples
-// displayTemples(temples);
-
-// // Function to filter temples based on the navigation clicked
-// function filterTemples(filter) {
-//     let filteredTemples;
-
-//     if (filter === 'old') {
-//         filteredTemples = temples.filter(temple => new Date(temple.dedicated).getFullYear() < 1900);
-//     } else if (filter === 'new') {
-//         filteredTemples = temples.filter(temple => new Date(temple.dedicated).getFullYear() > 2000);
-//     } else if (filter === 'large') {
-//         filteredTemples = temples.filter(temple => temple.area > 90000);
-//     } else if (filter === 'small') {
-//         filteredTemples = temples.filter(temple => temple.area < 10000);
-//     } else {
-//         filteredTemples = temples;
-//     }
-
-//     displayTemples(filteredTemples);
-// }
