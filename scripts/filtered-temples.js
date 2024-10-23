@@ -98,35 +98,39 @@ const temples = [
         imageUrl:
             "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/payson-utah/400x225/payson-utah-temple-exterior-1416671-wallpaper.jpg"
     }
-    //     {
-    //         templeName: "Urdaneta Philippines",
-    //         location: "Pangasinan, Philippines",
-    //         dedicated: "2019, January, 16",
-    //         area: 3029,
-    //         imageUrl: "https://churchofjesuschristtemples.org/assets/img/temples/urdaneta-philippines-temple/urdaneta-philippines-temple-45874-main.jpg"
-    //     },
-    //     {
-    //         templeName: "Johannesburg South Africa",
-    //         location: "Johannesburg, South Africa",
-    //         dedicated: "1982,November,27",
-    //         area: 1782,
-    //         imageUrl: "https://churchofjesuschristtemples.org/assets/img/temples/johannesburg-south-africa-temple/johannesburg-south-africa-temple-22467.jpg"
-    //     },
-    //     {
-    //         templeName: "Vancouver British Columbia",
-    //         location: "Langley, British Columbia, Canada",
-    //         dedicated: "2007, August, 4",
-    //         area: 2617,
-    //         imageUrl: "https://churchofjesuschristtemples.org/assets/img/temples/vancouver-british-columbia-temple/vancouver-british-columbia-temple-13063.jpg"
-    //     },
 ];
 
-createTempleCard();
+const homeLink = document.querySelector("#home");
+const oldLink = document.querySelector("#old");
+const newLink = document.querySelector("#new");
+const largeLink = document.querySelector("#large");
+const smallLink = document.querySelector("#small");
 
-function createTempleCard() {
+homeLink.addEventListener("click", () => {
+    createTempleCard(temples)
+});
+
+oldLink.addEventListener("click", () => {
+    createTempleCard(temples.filter(temple => new Date(temple.dedicated).getFullYear() < 1900))
+});
+
+newLink.addEventListener("click", () => {
+    createTempleCard(temples.filter(temple => new Date(temple.dedicated).getFullYear() > 2000))
+});
+
+largeLink.addEventListener("click", () => {
+    createTempleCard(temples.filter(temple => temple.area > 90000))
+});
+
+smallLink.addEventListener("click", () => {
+    createTempleCard(temples.filter(temple => temple.area < 10000))
+});
+
+function createTempleCard(filteredTemples) {
     document.querySelector(".temples").innerHTML = "";
-    temples.forEach(temple => {
-        let card = document.createElement("section");
+    filteredTemples.forEach(temple => {
+        let card = document.createElement("figure");
+        let caption = document.createElement("figcaption");
         let name = document.createElement("h3");
         let location = document.createElement("p");
         let dedicated = document.createElement("p");
@@ -139,17 +143,17 @@ function createTempleCard() {
         img.setAttribute("src", temple.imageUrl);
         img.setAttribute("alt", `${temple.templeName} Temple`);
         img.setAttribute("loading", "lazy");
-
-        card.appendChild(name);
         card.appendChild(img);
+        card.appendChild(caption);
 
-        card.appendChild(location);
-        card.appendChild(dedicated);
-        card.appendChild(area);
+        caption.appendChild(name);
+        caption.appendChild(location);
+        caption.appendChild(dedicated);
+        caption.appendChild(area);
         document.querySelector(".temples").appendChild(card);
     });
 }
-
+createTempleCard(temples);
 
 // // Function to display temples
 // function displayTemples(templeList) {
