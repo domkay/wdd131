@@ -141,6 +141,14 @@ main p {
     margin: 5px 0;
 }
 
+.font1 {
+    font-family: var(--font-family-main);
+}
+
+.font2 {
+    font-family: var(--font-family-alt);
+}
+
 footer {
     background-color: var(--accent-color1);
     color: white;
