@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore key concepts in WDD 131 - Dynamic Web Fundamentals with Priscilla Valverde Álvarez. Creating a  product review form page using good form design given specific
+    field requirements and submission confirmation with a counter.">
+    <meta name="author" content="Priscilla Valverde Alvarez">
+    <title>WDD 131 - Dynamic Web Fundamentals - Product Review Form - Priscilla Valverde Álvarez</title>
+
+    <link rel="stylesheet" href="styles/form.css">
+    <script src="scripts/form.js" defer></script>
+    <script src="scripts/getdates.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <div class="wrapper">
+        <header>
+            <h1>Product Review Form</h1>
+        </header>
+
+
+        <main>
+            <form method="get" action="review.html" class="wf1">
+                <fieldset id="item">
+                    <label for="product_name">Product Name<br></br><select id="product_name" name="product_name"
+                            required>
+
+                            <option value="" selected disabled>Select a Product ...</option>
+                        </select></label>
+                </fieldset>
+
+                <fieldset class="item">
+                    <legend>Overall Rating</legend><br>
+                    <div id="radio">
+                        <label for="overall-1">
+                            <span>&star;</span>
+                            <input type="radio" id="overall-1" name="overall" required>
+                        </label>
+                        <label for="overall-2">
+                            <span>&star;&star;</span>
+                            <input type="radio" id="overall-2" name="overall" required>
+                        </label>
+                        <label for="overall-3">
+                            <span>&star;&star;&star;</span>
+                            <input type="radio" id="overall-3" name="overall" required>
+                        </label>
+                        <label for="overall-4">
+                            <span>&star;&star;&star;&star;</span>
+                            <input type="radio" id="overall-4" name="overall" required>
+                        </label>
+                        <label for="overall-5">
+                            <span>&star;&star;&star;&star;&star;</span>
+                            <input type="radio" id="overall-5" name="overall" required>
+                        </label>
+                    </div>
+                </fieldset>
+
+
+                <fieldset class="item">
+                    <label for="install">Date of Installation <br></br>
+                        <input type="date" id="install" name="install" required></label>
+                </fieldset>
+
+                <fieldset class="features">
+                    <legend>Which inputs did you find useful in the product?
+                        <em>(Check all that apply)</em><br></br>
+                    </legend>
+                    <div class="checkbox-group">
+                        <label for="design"><input type="checkbox" id="design" name="design" value="design">
+                            Design</label>
+                        <label for="durability"><input type="checkbox" id="durability" name="durability"
+                                value="durability">
+                            Durability </label>
+                        <label for="ease"><input type="checkbox" id="ease" name="ease" value="ease">
+                            Ease of Use</label>
+                        <label for="performance"><input type="checkbox" id="performance" name="performance"
+                                value="performance">
+                            Performance</label>
+
+                    </div>
+                </fieldset>
+
+                <fieldset class="item">
+                    <label for="review">Written Review:<span class="small">(Optional)</span></label><br>
+                    <textarea id="review" name="review"></textarea>
+                </fieldset>
+
+                <fieldset class="item">
+                    <label for="user">Your Name:<span class="small">(Optional)</span></label><br>
+                    <input type="text" id="user" name="user">
+                </fieldset>
+
+                <input type="submit" value="Post Review">
+            </form>
+        </main>
+        <footer>
+            <p>
+                &copy; <span id="currentyear"></span> 🌼 Priscilla Valverde Álvarez, Costa Rica 🌼
+            </p>
+            <p id="lastModified">
+            </p>
+        </footer>
+    </div>
+</body>
+
+</html>

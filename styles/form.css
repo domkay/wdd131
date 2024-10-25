@@ -1,0 +1,155 @@
+/* styles/form.css */
+
+/* Root Variables */
+:root {
+    --primary-color: #f72585;
+    /* Rose */
+    --secondary-color: #7209b7;
+    /* Grape */
+    --accent-color1: #3a0ca3;
+    /* Zaffre */
+    --accent-color2: #4361ee;
+    /* Neon Blue */
+    --font-family-main: 'Montserrat', sans-serif;
+    --font-family-alt: 'Lora', serif;
+}
+
+/* General Styling */
+body {
+    font-family: var(--font-family-main);
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+header {
+    background-color: var(--primary-color);
+    padding: 20px;
+    text-align: center;
+    color: white;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2em;
+}
+
+main {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+fieldset {
+    padding: 10px;
+    border: 1px solid transparent;
+    /* Set border to transparent */
+}
+
+fieldset legend {
+    font-family: var(--font-family-alt);
+    color: var(--secondary-color);
+    font-weight: bold;
+    padding-bottom: 5px;
+}
+
+label {
+    font-family: var(--font-family-alt);
+}
+
+input[type="text"],
+input[type="date"],
+textarea,
+select {
+    width: 100%;
+    padding: 10px 0;
+    border-radius: 5px;
+    font-family: var(--font-family-main);
+    border: 1px solid var(--secondary-color);
+    /* Retained border for inputs */
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+/* stars */
+input[type="radio"] {
+    display: none;
+    position: relative;
+    caret-color: rgba(0, 0, 0, 0);
+}
+
+.radio {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: left;
+}
+
+.radio>label {
+    color: gold;
+    width: 30px;
+    height: 30px;
+    font-size: 2rem;
+    margin-left: 5px;
+    display: flex;
+    align-items: center;
+    caret-color: rgba(0, 0, 0, 0);
+    /* remove blinking cursor*/
+}
+
+.radio>label:hover {
+    color: #000;
+}
+
+.radio>label::before {
+    content: "\2606";
+}
+
+.radio input:checked~label::before {
+    content: "\2605";
+}
+
+.checkbox-group {
+    display: flex;
+    flex-direction: column;
+    /* Aligned vertically */
+    gap: 10px;
+}
+
+input[type="submit"] {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-family: var(--font-family-main);
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: var(--secondary-color);
+}
+
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background-color: var(--accent-color1);
+    color: white;
+    margin-top: 20px;
+}
+
+footer p {
+    margin: 5px 0;
+}
