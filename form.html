@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WDD 131 - Product form- Madji Kayombo</title>
+    <title>WDD 131 - Product form - Madji Kayombo</title>
     <meta name="description"
         content="WDD 131 - Dynamic Web Fundamentals course by Madji Kayombo. This page showcases basic HTML structure and includes sections with relevant content and resources.">
     <meta name="author" content="Madji Kayombo Ngoie">
@@ -25,14 +25,13 @@
     <main>
         <form method="get" action="review.html">
             <fieldset id="item">
+                <legend>Product Name</legend>
                 <label for="product_name">
-                    <legend>Product Name</legend>
                     <select id="product_name" name="product_name" required>
                         <option value="" selected disabled>Select a Product ...</option>
                     </select>
                 </label>
             </fieldset>
-
             <fieldset class="item">
                 <legend>Overall Rating</legend>
                 <div class="radio">
@@ -43,51 +42,42 @@
                     <input type="radio" id="onestar" name="stars" value="1" required><label for="onestar"></label>
                 </div>
             </fieldset>
-
             <fieldset class="item">
+                <legend>Date of Installation</legend>
                 <label for="install">
-                    <legend>Date of installation</legend>
                     <input type="date" id="install" name="install" required>
                 </label>
             </fieldset>
-
             <fieldset class="features">
-                <legend>Which inputs did you find useful in the product?
-                    <em>(Check all that apply)</em>
-                </legend>
+                <legend>Which inputs did you find useful in the product? <em>(Check all that apply)</em></legend>
                 <div class="checkbox-group">
-                    <label for="design"><input type="checkbox" id="design" name="design" value="design">
-                        Design</label>
+                    <label for="design"><input type="checkbox" id="design" name="design" value="design"> Design</label>
                     <label for="durability"><input type="checkbox" id="durability" name="durability" value="durability">
-                        Durability </label>
-                    <label for="ease"><input type="checkbox" id="ease" name="ease" value="ease">
-                        Ease of Use</label>
+                        Durability</label>
+                    <label for="ease"><input type="checkbox" id="ease" name="ease" value="ease"> Ease of Use</label>
                     <label for="performance"><input type="checkbox" id="performance" name="performance"
-                            value="performance">
-                        Performance</label>
+                            value="performance"> Performance</label>
                 </div>
             </fieldset>
-
             <fieldset class="item">
+                <legend>Written Review: <span>(Optional)</span></legend>
                 <label for="review">
-                    <legend>Written Review:<span>(Optional)</span></legend>
+                    <textarea id="review" name="review"></textarea>
                 </label>
-                <textarea id="review" name="review"></textarea>
             </fieldset>
-
             <fieldset class="item">
+                <legend>Your Name: <span>(Optional)</span></legend>
                 <label for="user">
-                    <legend>Your Name:<span>(Optional)</span></legend>
+                    <input type="text" id="user" name="user">
                 </label>
-                <input type="text" id="user" name="user">
             </fieldset>
             <input type="submit" value="Post Review">
         </form>
     </main>
+    <footer>
+        <p>&copy; <span id="currentyear"></span> Madji Kayombo, Democratic Republic of Congo.</p>
+        <p id="lastModified">Last Modified: N/A</p>
+    </footer>
 </body>
-<footer>
-    <p>&copy; <span id="currentyear"></span> Madji Kayombo, Democratic Republic of Congo.</p>
-    <p id="lastModified">Last Modified: N/A</p>
-</footer>
 
 </html>
