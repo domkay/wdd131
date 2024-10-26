@@ -12,13 +12,3 @@ document.addEventListener('DOMContentLoaded', (event) => {
         navLinks.classList.toggle('show');
     });
 });
-
-//Lazy loading images
-document.addEventListener("DOMContentLoaded", function () {
-    const lazyImages = document.querySelectorAll("img[loading='lazy']");
-
-    lazyImages.forEach(img => {
-        img.src = img.dataset.src;
-        img.removeAttribute('loading');
-    });
-});

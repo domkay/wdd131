@@ -1,0 +1,42 @@
+@media (max-width: 600px) {
+    .content {
+        grid-template-columns: 1fr;
+        /* 1 column */
+        padding: 10px;
+    }
+
+    .content {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .dest {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        /* Stack the nav links vertically */
+    }
+
+    .hero h2 {
+        font-size: 2em;
+        /* Adjust font size for smaller screens */
+    }
+
+    header nav ul {
+        display: none;
+    }
+
+    header nav ul.show {
+        display: flex;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+}

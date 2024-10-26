@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Blog - Home</title>
+    <meta name="description" content="Travel Blog showcasing beautiful destinations and travel tips.">
+    <meta name="author" content="Madji Kayombo Ngoie">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles/travel-blog-large.css">
+    <link rel="stylesheet" href="styles/travel-blog-medium.css">
+    <link rel="stylesheet" href="styles/travel-blog-small.css">
+    <script src="scripts/travel-blog.js" defer></script>
+</head>
+
+<body>
+    <header class="header">
+        <div class="logo">
+            <h1>Travel<span>Blog</span></h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="destinations.html">Destinations</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="siteplan.html">Site Plan</a></li>
+            </ul>
+            <div class="hamburger">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </nav>
+    </header>
+    <section class="hero">
+        <picture>
+            <source srcset="images/large-hero.webp" media="(min-width: 800px)">
+            <source srcset="images/medium-hero.webp" media="(min-width: 600px)">
+            <img src="images/small-hero.webp" alt="Travel Destination">
+        </picture>
+        <h2>Explore the World with Us</h2>
+        <p>Discover the most beautiful destinations and travel tips.</p>
+        <a href="#" class="cta-button">Read Our Guides</a>
+    </section>
+    <main class="content">
+        <h2 class="destinations" id="destinations">Our destinations</h2>
+        <div class="dest" id="dest"></div>
+    </main>
+    <footer class="footer">
+        <p>&copy; <span id="currentyear"></span> Travel Blog, Madji Kayombo, Democratic Republic of Congo.</p>
+        <p id="lastModified">Last Modified: <span id="lastModifiedDate"></span></p>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Blog - Home</title>
+    <meta name="description" content="Travel Blog showcasing beautiful destinations and travel tips.">
+    <meta name="author" content="Madji Kayombo Ngoie">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles/destinations-large.css">
+    <!-- <link rel="stylesheet" href="styles/travel-blog-medium.css">
+    <link rel="stylesheet" href="styles/travel-blog-small.css"> -->
+    <script src="scripts/destinations.js" defer></script>
+</head>
+
+<body>
+    <header class="header">
+        <div class="logo">
+            <h1>Travel<span>Blog</span></h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="destinations.html">Destinations</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="siteplan.html">Site Plan</a></li>
+            </ul>
+            <div class="hamburger">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </nav>
+    </header>
+    <main class="content">
+        <h2>Our Destinations</h2>
+        <div class="filter-options">
+            <label for="region">Region:</label>
+            <select id="region" name="region">
+                <option value="all">All</option>
+                <option value="africa">Africa</option>
+                <option value="asia">Asia</option>
+                <option value="europe">Europe</option>
+                <!-- Add more regions as needed -->
+            </select>
+
+            <label for="travel-type">Travel Type:</label>
+            <select id="travel-type" name="travel-type">
+                <option value="all">All</option>
+                <option value="adventure">Adventure</option>
+                <option value="family">Family</option>
+                <option value="romantic">Romantic</option>
+                <!-- Add more travel types as needed -->
+            </select>
+
+            <label for="budget">Budget:</label>
+            <select id="budget" name="budget">
+                <option value="all">All</option>
+                <option value="low">Low</option>
+                <option value="medium">Medium</option>
+                <option value="high">High</option>
+            </select>
+
+            <button type="button" onclick="filterDestinations()">Filter</button>
+        </div>
+        <div class="destination-list">
+
+        </div>
+    </main>
+
+
+    <footer class="footer">
+        <p>&copy; <span id="currentyear"></span> Travel Blog, Madji Kayombo, Democratic Republic of Congo.</p>
+        <p id="lastModified">Last Modified: <span id="lastModifiedDate"></span></p>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,204 @@
+/* Root Variables */
+:root {
+    --primary-color: #f72585;
+    /* Rose */
+    --secondary-color: #7209b7;
+    /* Grape */
+    --accent-color1: #3a0ca3;
+    /* Zaffre */
+    --accent-color2: #4361ee;
+    /* Neon Blue */
+    --hover-color: #ff69b4;
+    /* Hover effect color */
+    --font-family-main: 'Montserrat', sans-serif;
+    --font-family-alt: 'Lora', serif;
+}
+
+/* General Styling */
+body {
+    font-family: var(--font-family-main);
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+header {
+    background-color: var(--primary-color);
+    padding: 20px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2em;
+    display: flex;
+    flex-direction: column;
+}
+
+header nav {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+header nav ul {
+    display: flex;
+    gap: 15px;
+    margin: 0;
+    padding: 0;
+    flex-direction: row;
+    list-style: none;
+}
+
+header nav ul li {
+    margin: 0;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+    color: var(--hover-color);
+}
+
+header nav ul.show {
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background-color: var(--primary-color);
+    width: 100%;
+    text-align: center;
+    display: flex;
+    z-index: 1000;
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger div {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 4px;
+    transition: all 0.3s ease;
+}
+
+.hero {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+.hero img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.hero h2 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    animation: fadeIn 2s ease-out;
+}
+
+.hero p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.hero .cta-button {
+    background-color: var(--primary-color);
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+}
+
+/* Keyframes for fadeIn animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+main {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+.content {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 20px;
+}
+
+.dest {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+}
+
+.dest figure {
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    margin: 0;
+    padding: 10px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.dest figure img {
+    width: 300px;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.footer {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 10px;
+}

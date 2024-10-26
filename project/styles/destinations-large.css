@@ -1,0 +1,238 @@
+:root {
+    --primary-color: #f72585;
+    /* Rose */
+    --secondary-color: #7209b7;
+    /* Grape */
+    --accent-color1: #3a0ca3;
+    /* Zaffre */
+    --accent-color2: #4361ee;
+    /* Neon Blue */
+    --hover-color: #ff69b4;
+    /* Hover effect color */
+    --font-family-main: 'Montserrat', sans-serif;
+    --font-family-alt: 'Lora', serif;
+}
+
+body {
+    font-family: var(--font-family-main);
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+.header {
+    background-color: var(--primary-color);
+    padding: 20px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 2em;
+    display: flex;
+    flex-direction: column;
+}
+
+header nav {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+header nav ul {
+    display: flex;
+    gap: 15px;
+    margin: 0;
+    padding: 0;
+    flex-direction: row;
+    list-style: none;
+}
+
+header nav ul li {
+    margin: 0;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+    color: var(--hover-color);
+}
+
+header nav ul.show {
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background-color: var(--primary-color);
+    width: 100%;
+    text-align: center;
+    display: flex;
+    z-index: 1000;
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger div {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 4px;
+    transition: all 0.3s ease;
+}
+
+.content {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+.content h2 {
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.filter-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+    gap: 10px;
+}
+
+.filter-options label {
+    font-size: 1em;
+    margin-right: 10px;
+}
+
+.filter-options select {
+    padding: 5px;
+    font-size: 1em;
+}
+
+.filter-options button {
+    padding: 10px 20px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: var(--font-family-main);
+    transition: background-color 0.3s ease;
+}
+
+.filter-options button:hover {
+    background-color: var(--secondary-color);
+}
+
+.destination-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.destination {
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.destination img {
+    width: 40%;
+    height: auto;
+    border-radius: 5px;
+    margin-right: 20px;
+}
+
+.destination .description {
+    flex: 1;
+}
+
+.destination .description h3 {
+    font-family: var(--font-family-alt);
+    color: var(--secondary-color);
+    margin: 0 0 10px 0;
+}
+
+.destination .description p {
+    margin: 0 0 10px 0;
+}
+
+.destination .description a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.destination .description a:hover {
+    background-color: var(--secondary-color);
+}
+
+.footer {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 800px) {
+    .destination-list {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+    .destination-list {
+        grid-template-columns: 1fr;
+    }
+
+    .filter-options {
+        flex-direction: column;
+    }
+
+    .hero h2 {
+        font-size: 2em;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        display: none;
+    }
+
+    header nav ul.show {
+        display: flex;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+}

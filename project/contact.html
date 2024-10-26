@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Blog - Home</title>
+    <meta name="description" content="Travel Blog showcasing beautiful destinations and travel tips.">
+    <meta name="author" content="Madji Kayombo Ngoie">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles/contact.css">
+    <script src="scripts/contact.js" defer></script>
+</head>
+
+<body>
+    <header class="header">
+        <div class="logo">
+            <h1>Travel<span>Blog</span></h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="destinations.html">Destinations</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="siteplan.html">Site Plan</a></li>
+            </ul>
+            <div class="hamburger">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section id="contact-info">
+            <h2>About Us</h2>
+            <p>Welcome to our blog! Reach out with any questions or comments.</p>
+            <h2>Contact Details</h2>
+            <p>Email: contact@ourblog.com</p>
+            <p>Phone: +123-456-7890</p>
+        </section>
+        <section id="social-media">
+            <h2>Connect with Us</h2>
+            <ul>
+                <li><a href="https://facebook.com/ourblog" target="_blank">Facebook</a></li>
+                <li><a href="https://twitter.com/ourblog" target="_blank">Twitter</a></li>
+                <li><a href="https://instagram.com/ourblog" target="_blank">Instagram</a></li>
+            </ul>
+        </section>
+        <section id="leave-review">
+            <h2>Leave a Review</h2>
+            <form action="/submit-review" method="post">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <br>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <br>
+                <label for="review">Review:</label>
+                <textarea id="review" name="review" required></textarea>
+                <br>
+                <button type="submit">Submit</button>
+            </form>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; <span id="currentyear"></span> Travel Blog, Madji Kayombo, Democratic Republic of Congo.</p>
+        <p id="lastModified">Last Modified: <span id="lastModifiedDate"></span></p>
+    </footer>
+</body>
+
+</html>
